@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohammed Abdullah - Cloud Solutions Architect and DevOps Engineer specializing in AWS, Azure, Kubernetes, and Infrastructure Automation">
+    <meta name="keywords" content="Cloud Engineer, DevOps, AWS, Azure, Kubernetes, Docker, Terraform, Infrastructure as Code">
+    <meta name="author" content="Mohammed Abdullah">
+    <title>Mohammed Abdullah | Cloud & DevOps Engineer</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts - Raleway & Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800;900&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           MODERNIZED PORTFOLIO - 2025 DESIGN SYSTEM
+           ============================================ */
+
+        /* === CSS CUSTOM PROPERTIES - DevOps/CI/CD Theme === */
+        :root {
+            /* Core Brand Colors - Engineering Blue & Neon Green */
+            --primary-color: #1E3A8A;
+            --primary-hover: #1E40AF;
+            --primary-light: #3B82F6;
+            --secondary-color: #1E293B;
+            --accent-color: #10B981;
+            --accent-hover: #059669;
+            --accent-alt: #F59E0B;
+            --pipeline-blue: #38BDF8;
+            --success-color: #10B981;
+
+            /* Light Mode Colors */
+            --text-dark: #0F172A;
+            --text-secondary: #475569;
+            --text-light: #64748B;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --bg-tertiary: #F1F5F9;
+            --border-color: #E2E8F0;
+            --border-light: #F1F5F9;
+
+            /* Dark Mode Colors */
+            --dark-bg: #0F172A;
+            --dark-bg-secondary: #1E293B;
+            --dark-bg-tertiary: #334155;
+            --dark-text: #F1F5F9;
+            --dark-text-secondary: #CBD5E1;
+            --dark-border: #334155;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #1E293B 50%, #10B981 100%);
+            --gradient-hero: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #1E3A8A 100%);
+            --gradient-card: linear-gradient(180deg, rgba(16,185,129,0.05) 0%, transparent 100%);
+            --gradient-shine: linear-gradient(90deg, transparent, rgba(16,185,129,0.3), transparent);
+            --gradient-pipeline: linear-gradient(90deg, #10B981 0%, #38BDF8 50%, #F59E0B 100%);
+
+            /* Shadows */
+            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+            --shadow-2xl: 0 30px 60px rgba(0, 0, 0, 0.16), 0 12px 24px rgba(0, 0, 0, 0.1);
+            --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.3);
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            --spacing-3xl: 6rem;
+            --spacing-4xl: 8rem;
+
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+
+            /* Transitions - Optimized for DevOps feel */
+            --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            /* Layout */
+            --nav-height: 72px;
+            --max-width: 1200px;
+
+            /* Typography - Technical & Modern */
+            --font-heading: 'Raleway', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        /* Dark Mode Theme */
+        body.dark-mode {
+            --text-dark: #F1F5F9;
+            --text-secondary: #CBD5E1;
+            --text-light: #94A3B8;
+            --white: #0F172A;
+            --light-bg: #1E293B;
+            --bg-tertiary: #334155;
+            --border-color: #334155;
+            --border-light: #1E293B;
+        }
+
+        body.dark-mode {
+            background: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--white);
+            transition: background-color var(--transition), color var(--transition);
+        }
+
+        /* === NAVIGATION - DevOps Control Panel Style === */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+            box-shadow: none;
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1);
+            border-bottom-color: var(--accent-color);
+            height: 64px;
+        }
+
+        .navbar.scrolled .nav-logo {
+            color: var(--accent-color);
+        }
+
+        body.dark-mode .navbar {
+            background: rgba(15, 23, 42, 0.9);
+        }
+
+        body.dark-mode .navbar.scrolled {
+            background: rgba(30, 41, 59, 1);
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: white;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+            transition: all var(--transition-fast);
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+
+        .nav-logo:hover {
+            color: var(--accent-color);
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xs);
+            align-items: center;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transform: translateX(-50%);
+            transition: width var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--accent-color);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid var(--accent-color);
+            border-radius: var(--radius-md);
+            color: var(--accent-color);
+            cursor: pointer;
+            padding: 0.5rem;
+            font-size: 1.25rem;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin-left: var(--spacing-sm);
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            transform: rotate(180deg);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid var(--accent-color);
+            border-radius: var(--radius-md);
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            cursor: pointer;
+            padding: var(--spacing-xs);
+            transition: all var(--transition);
+        }
+
+        .nav-toggle:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        /* === ANIMATIONS - Pipeline & CI/CD Inspired === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-30px) scale(1.1); opacity: 0.5; }
+        }
+
+        /* Pipeline Flow Animation */
+        @keyframes pipelineFlow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Node Blink Animation */
+        @keyframes nodeBlink {
+            0%, 100% { opacity: 1; box-shadow: 0 0 10px var(--accent-color); }
+            50% { opacity: 0.3; box-shadow: 0 0 5px var(--accent-color); }
+        }
+
+        /* Glow Effect */
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(16, 185, 129, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); }
+        }
+
+        /* Data Stream Animation */
+        @keyframes dataStream {
+            0% { transform: translateY(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(100%); opacity: 0; }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+        }
+
+        .fade-up {
+            transform: translateY(40px);
+        }
+
+        .fade-up.animated {
+            transform: translateY(0);
+        }
+
+        .fade-left {
+            transform: translateX(-40px);
+        }
+
+        .fade-left.animated {
+            transform: translateX(0);
+        }
+
+        .fade-scale {
+            transform: scale(0.9);
+        }
+
+        .fade-scale.animated {
+            transform: scale(1);
+        }
+
+        /* === HERO - DevOps Pipeline Command Center === */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-hero);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+            color: var(--white);
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            margin-top: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Pipeline Grid Background */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Pipeline Flow Overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        body.dark-mode .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #1E3A8A 100%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            box-shadow:
+                0 0 0 8px rgba(16, 185, 129, 0.2),
+                var(--shadow-2xl);
+            margin-bottom: var(--spacing-lg);
+            object-fit: cover;
+            object-position: center top;
+            transition: all var(--transition-slow);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05) translateY(-8px);
+            box-shadow:
+                0 0 0 12px rgba(16, 185, 129, 0.3),
+                0 0 40px rgba(16, 185, 129, 0.6);
+            border-color: var(--accent-alt);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: var(--spacing-sm);
+            text-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.95;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-lg);
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-shine);
+            transition: left var(--transition-slow);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+        }
+
+        /* === SECTIONS - Pipeline Stages === */
+        .section {
+            padding: var(--spacing-4xl) var(--spacing-lg);
+            max-width: var(--max-width);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-alt {
+            background: var(--light-bg);
+        }
+
+        body.dark-mode .section-alt {
+            background: var(--dark-bg-secondary);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: var(--spacing-md);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--gradient-pipeline);
+            border-radius: var(--radius-full);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+            animation: pipelineFlow 3s linear infinite;
+        }
+
+        body.dark-mode .section-title {
+            color: var(--dark-text);
+        }
+
+        /* === ABOUT === */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* About content within hero section */
+        .hero .about-content {
+            margin: var(--spacing-xl) auto var(--spacing-lg) auto;
+        }
+
+        .about-text {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* About text within hero section */
+        .hero .about-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .resume-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: 2px solid var(--primary-color);
+            border-radius: var(--radius-md);
+            transition: all var(--transition);
+            background: transparent;
+        }
+
+        .resume-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Resume link within hero section - better visibility */
+        .hero .resume-link {
+            color: white;
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero .resume-link:hover {
+            background: white;
+            color: var(--primary-color);
+            border-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        /* === SKILLS === */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .skill-category {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition);
+        }
+
+        .skill-category:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-color);
+            transform: translateY(-4px);
+        }
+
+        .skill-category h3 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category h3 i {
+            font-size: 1rem;
+            transition: transform var(--transition);
+        }
+
+        .skill-category:hover h3 i {
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .skill-tag {
+            background: var(--light-bg);
+            color: var(--text-dark);
+            padding: 0.3rem 0.65rem;
+            border-radius: var(--radius-md);
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-fast);
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* === EXPERIENCE === */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+            border-radius: var(--radius-full);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 12px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow-md), 0 0 0 4px rgba(37, 99, 235, 0.15);
+            z-index: 2;
+            transition: all var(--transition);
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.3);
+            box-shadow: var(--shadow-lg), 0 0 0 8px rgba(56, 189, 248, 0.2);
+            background: var(--accent-color);
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-slow);
+        }
+
+        .timeline-content:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .timeline-date {
+            color: var(--text-light);
+            font-size: 0.8125rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .timeline-title {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .timeline-company {
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-highlights {
+            list-style: none;
+            margin-top: var(--spacing-sm);
+        }
+
+        .timeline-highlights li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            padding-left: var(--spacing-md);
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .timeline-highlights li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* === PROJECTS === */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-slow);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-card);
+            opacity: 0;
+            transition: opacity var(--transition);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-color);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 180px;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 3rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: var(--spacing-lg);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+
+        .project-title {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.3;
+            transition: color var(--transition-fast);
+        }
+
+        .project-card:hover .project-title {
+            color: var(--primary-hover);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .tech-tag {
+            background: var(--light-bg);
+            color: var(--primary-color);
+            padding: 0.375rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.8125rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: all var(--transition-fast);
+        }
+
+        .tech-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: auto;
+        }
+
+        .project-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+        }
+
+        .project-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* === CERTIFICATIONS === */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all var(--transition-slow);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-color);
+        }
+
+        .cert-icon {
+            font-size: 4.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            transition: transform var(--transition);
+        }
+
+        .cert-icon-img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            margin-bottom: var(--spacing-sm);
+            transition: transform var(--transition);
+            border-radius: var(--radius-sm);
+        }
+
+        .cert-card:hover .cert-icon,
+        .cert-card:hover .cert-icon-img {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .cert-card.kodekloud-cert {
+            padding: var(--spacing-sm);
+        }
+
+        .cert-card.kodekloud-cert .cert-icon-img {
+            width: 140px;
+            height: 140px;
+        }
+
+        .cert-name {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-dark);
+        }
+
+        .cert-issuer {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cert-verify {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
+        }
+
+        .cert-verify:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* === TESTIMONIALS === */
+        .appreciation-card {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-slow);
+            text-align: center;
+        }
+
+        .appreciation-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .appreciation-card img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            object-fit: contain;
+            max-height: 400px;
+        }
+
+        /* === BLOG === */
+        .blog-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-item {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            margin-bottom: var(--spacing-lg);
+            transition: all var(--transition-slow);
+        }
+
+        .blog-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .blog-title {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .blog-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .blog-title a:hover {
+            color: var(--primary-hover);
+        }
+
+        /* === CONTACT === */
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--text-dark);
+            font-size: 1rem;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-slow);
+            text-align: center;
+        }
+
+        .contact-item:hover {
+            background: var(--light-bg);
+            transform: translateY(-4px);
+            box-shadow: 0 0 0 3px var(--accent-color), var(--shadow-xl);
+            border-color: var(--primary-color);
+        }
+
+        .contact-item i {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color var(--transition-fast);
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-hover);
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background: var(--gradient-hero);
+            color: white;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 30% 40%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            background: rgba(56, 189, 248, 0.15);
+            border: 2px solid rgba(56, 189, 248, 0.3);
+            border-radius: 50%;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            border-color: var(--accent-color);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: var(--spacing-lg);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: 2px solid var(--accent-color);
+            border-radius: var(--radius-md);
+            transition: all var(--transition);
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            :root {
+                --nav-height: 64px;
+                --spacing-3xl: 4rem;
+                --spacing-4xl: 5rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: var(--nav-height);
+                flex-direction: column;
+                background: var(--secondary-color);
+                width: 100%;
+                padding: var(--spacing-lg);
+                box-shadow: var(--shadow-xl);
+                transition: left var(--transition);
+                border-top: 1px solid rgba(56, 189, 248, 0.2);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.125rem;
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item {
+                padding-left: 40px;
+            }
+
+            .timeline-dot {
+                left: 2px;
+            }
+
+            .projects-grid,
+            .skills-grid,
+            .certs-grid,
+            .opensource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-link {
+                width: 48px;
+                height: 48px;
+                font-size: 1.25rem;
+            }
+        }
+
+        /* === ACCESSIBILITY === */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: var(--spacing-sm);
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 0 0 var(--radius-sm) 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        *:focus-visible {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .text-center { text-align: center; }
+        .mt-1 { margin-top: var(--spacing-sm); }
+        .mt-2 { margin-top: var(--spacing-md); }
+        .mb-1 { margin-bottom: var(--spacing-sm); }
+        .mb-2 { margin-bottom: var(--spacing-md); }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="Home">MA</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#home" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+                <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#blog" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section id="home" class="hero" role="banner">
+            <div class="hero-content">
+                <img src="myphoto.jpeg" alt="Mohammed Abdullah - Professional headshot" class="profile-photo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="profile-photo profile-photo-placeholder" style="display: none;">
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <h1 id="hero-name"></h1>
+                <p class="hero-tagline" id="hero-tagline"></p>
+
+                <div class="about-content">
+                    <p class="about-text" id="about-text"></p>
+                    <a href="Abdullah--Resume--.pdf" class="resume-link" download="Mohammed_Abdullah_Resume.pdf">
+                        <i class="fas fa-file-pdf"></i>
+                        Download Resume
+                    </a>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">See My Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-alt">
+            <h2 class="section-title animate-on-scroll fade-up">Skills &amp; Tools</h2>
+            <div class="skills-grid" id="skills-container"></div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title animate-on-scroll fade-up">Professional Experience</h2>
+            <div class="timeline" id="experience-container"></div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <h2 class="section-title animate-on-scroll fade-up">Featured Projects</h2>
+            <div class="projects-grid" id="projects-container"></div>
+        </section>
+
+        <section id="certifications" class="section">
+            <h2 class="section-title animate-on-scroll fade-up">Certifications &amp; Credentials</h2>
+            <div class="certs-grid" id="certifications-container"></div>
+
+            <div style="margin-top: var(--spacing-3xl); text-align: center;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 700; color: var(--primary-color); margin-bottom: var(--spacing-lg);">
+                    <i class="fab fa-microsoft"></i> Microsoft Learn Achievements
+                </h3>
+                <div class="microsoft-learn-badge">
+                    <script src="https://learn.microsoft.com/en-us/users/abdullahmohammed-7189/card.js"></script>
+                </div>
+                <a href="https://learn.microsoft.com/en-us/users/abdullahmohammed-7189/"
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: var(--radius-md); background: var(--primary-color); color: white; text-decoration: none; font-weight: 600; transition: all var(--transition); margin-top: var(--spacing-md);"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-lg)';"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <i class="fas fa-external-link-alt"></i> View Full Profile
+                </a>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section section-alt">
+            <h2 class="section-title animate-on-scroll fade-up">Testimonials &amp; Recognition</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md); max-width: 1200px; margin: 0 auto;">
+                <div style="min-height: 300px;">
+                    <div class='sk-ww-linkedin-recommendations' data-embed-id='25609284'></div>
+                    <script src='https://widgets.sociablekit.com/linkedin-recommendations/widget.js' defer></script>
+                </div>
+
+                <div>
+                    <a href="https://www.linkedin.com/in/ab-cloud-dev/details/recommendations/?detailScreenTabIndex=0"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       style="display: block; transition: all var(--transition);">
+                        <div class="appreciation-card" style="cursor: pointer; height: 100%;">
+                            <img src="certs-icons/Linkedin-recommendation.png" alt="LinkedIn Recommendations" loading="lazy" style="max-height: 200px;">
+                            <p style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.875rem;">
+                                <i class="fab fa-linkedin"></i> View All
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="appreciation-card">
+                    <img src="certs-icons/Performance-apperciation.png" alt="Stellar Performance" loading="lazy" style="max-height: 200px;">
+                    <p style="font-size: 0.875rem;">Stellar Performance</p>
+                </div>
+
+                <div class="appreciation-card">
+                    <img src="certs-icons/Performance-apperciation-01.png" alt="Exceptional Contribution" loading="lazy" style="max-height: 200px;">
+                    <p style="font-size: 0.875rem;">Exceptional Contribution</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section section-alt">
+            <h2 class="section-title animate-on-scroll fade-up">Blog &amp; Learning Journey</h2>
+            <div class="blog-list" id="blog-container"></div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title animate-on-scroll fade-up">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="about-text">
+                    I'm always interested in hearing about new opportunities, collaborations, or just connecting with fellow cloud and DevOps enthusiasts. Feel free to reach out!
+                </p>
+                <div class="contact-info" id="contact-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="social-links" id="social-links-container"></div>
+        <p>&copy; <span id="current-year"></span> <span id="footer-name"></span>. All rights reserved.</p>
+        <p style="opacity: 0.8; margin-top: 0.5rem;">Open to collaboration and exciting opportunities</p>
+        <a href="#home" class="back-to-top">
+            <i class="fas fa-arrow-up"></i> Back to Top
+        </a>
+    </footer>
+
+    <script>
+        const PORTFOLIO_CONFIG = {
+            personal: {
+                name: "Mohammed Abdullah",
+                tagline: "Cloud Solutions Architect | DevOps Engineer | Multi-Cloud Infrastructure Specialist",
+                about: "Customer-focused Cloud & DevOps Engineer with 6+ years specializing in cloud infrastructure, automation, and enterprise system administration. Proven expertise in deploying AWS/Azure solutions, automating infrastructure with Terraform/Ansible, and integrating unified communications platforms. Strong track record in incident resolution, security implementation, and managing virtualized environments."
+            },
+            skills: [
+                {
+                    category: "Cloud Platforms",
+                    icon: "fa-cloud",
+                    skills: ["AWS (EC2, EKS, Lambda, VPC, IAM, S3, CloudWatch)", "Azure (Virtual Machines, AKS, Resource Groups)", "Multi-Cloud Architecture"]
+                },
+                {
+                    category: "Infrastructure as Code",
+                    icon: "fa-code",
+                    skills: ["Terraform", "Ansible", "Packer", "CloudFormation"]
+                },
+                {
+                    category: "CI/CD & Automation",
+                    icon: "fa-sync",
+                    skills: ["Jenkins", "GitHub Actions", "GitLab CI", "AWS DevOps"]
+                },
+                {
+                    category: "Containers & Orchestration",
+                    icon: "fa-box",
+                    skills: ["Docker", "Kubernetes", "Helm", "EKS", "AKS"]
+                },
+                {
+                    category: "Monitoring & Logging",
+                    icon: "fa-chart-line",
+                    skills: ["CloudWatch", "Prometheus", "Grafana", "ELK Stack"]
+                },
+                {
+                    category: "Scripting & Programming",
+                    icon: "fa-terminal",
+                    skills: ["Python", "Bash", "PowerShell", "YAML", "JSON"]
+                },
+                {
+                    category: "Infrastructure",
+                    icon: "fa-server",
+                    skills: ["Red Hat", "Windows Server", "VMware ESXi", "Microsoft Azure", "AWS", "IIS"]
+                },
+                {
+                    category: "Networking",
+                    icon: "fa-network-wired",
+                    skills: ["SIP/H.323", "DHCP", "DNS", "TCP/IP", "Network Security (TLS/SSL)", "SNMP", "WebRTC", "GARP"]
+                },
+                {
+                    category: "Voice & Video",
+                    icon: "fa-phone-volume",
+                    skills: ["Avaya Aura Suite (SM, SMGR, AADS, SBC, CM, AMMG)", "Microsoft Teams Direct Routing", "Avaya Equinox & Meetings Management (OTT/TE)", "Avaya Spaces"]
+                },
+                {
+                    category: "Tools & Technologies",
+                    icon: "fa-tools",
+                    skills: ["Wireshark", "TraceSBC", "TCP Dump", "Event Viewer", "HP OpenView", "Python"]
+                },
+                {
+                    category: "Security & Networking",
+                    icon: "fa-shield-alt",
+                    skills: ["VPN", "Firewall Configuration", "TLS/SSL", "LDAP", "Active Directory", "Network Troubleshooting"]
+                }
+            ],
+            experience: [
+                {
+                    date: "March 2025 - September 2025",
+                    title: "Cloud Infrastructure Engineer (GCP)",
+                    company: "Jsoma Enterprise Pvt. Ltd",
+                    location: "Hyderabad",
+                    highlights: [
+                        "Worked closely with application development teams to define infrastructure requirements and deliver highly available and performance-optimized services.",
+                        "Supported cross-functional teams and vendors in resolving cloud-related issues, ensuring uptime and configuration consistency.",
+                        "Provided technical guidance on cloud migration and automation, enabling smoother adoption of GCP alongside existing AWS workloads.",
+                        "Led the design and deployment of Terraform-based Infrastructure as Code (IaC) solutions to automate GCP provisioning and configuration.",
+                        "Developed Terraform CI/CD pipelines integrated with version control and policy scanning tools (e.g., Terraform Cloud, GitHub Actions).",
+                        "Optimized GCP resource utilization and costs through rightsizing, automation, and monitoring tools such as Cloud Billing and Recommender APIs.",
+                        "Design and deploy scalable, secure, and resilient architectures on Google Cloud (GCE, GKE, Cloud Run, Cloud Storage, Cloud SQL, etc.)."
+                    ]
+                },
+                {
+                    date: "August 2021 - February 2025",
+                    title: "Technical Support Specialist",
+                    company: "Capgemini (Client: Avaya) & Avaya",
+                    location: "Hyderabad",
+                    highlights: [
+                        "Promoted to direct Avaya role in August 2023 based on exceptional performance",
+                        "Integrated Avaya Aura systems with VoIP platforms and Microsoft Teams Direct Routing",
+                        "Deployed Avaya applications across Azure, AWS, and VMware environments",
+                        "Automated infrastructure provisioning using Terraform and Ansible",
+                        "Implemented security protocols (SRTP, TLS, SSL) and authentication mechanisms",
+                        "Collaborated with SRE and development teams on CI/CD pipeline implementation"
+                    ]
+                },
+                {
+                    date: "July 2017 - December 2018",
+                    title: "Technical Analyst",
+                    company: "Goldstone Technologies Limited (BlueJeans Networks)",
+                    location: "Remote",
+                    highlights: [
+                        "Integrated enterprise video conferencing systems with BlueJeans Network platform",
+                        "Diagnosed video/audio quality issues using Wireshark and WebRTC logs",
+                        "Supported large-scale events with 10,000+ concurrent participants",
+                        "Achieved 95% compliance with network performance standards"
+                    ]
+                },
+                {
+                    date: "April 2016 - February 2017",
+                    title: "System Engineer",
+                    company: "Foray Software Private Limited (TCS - ICICI LOMBARD)",
+                    location: "Mumbai",
+                    highlights: [
+                        "Managed 100+ production servers across Windows and UNIX platforms",
+                        "Implemented HP OpenView monitoring reducing detection time by 40%",
+                        "Led Windows Server migration project, completing 15% under budget",
+                        "Optimized IIS and VMware resources, improving performance by 25%"
+                    ]
+                }
+            ],
+            projects: [
+                {
+                    title: "CI/CD Pipeline with Jenkins, Kubernetes, and Ansible",
+                    description: "Robust CI/CD pipeline implementation automating build, test, and deployment processes for containerized applications. Demonstrates end-to-end software delivery using Jenkins, Kubernetes, and Ansible for reliable and efficient deployment workflows.",
+                    tech: ["Jenkins", "Kubernetes", "Ansible", "Docker", "CI/CD"],
+                    image: "https://github.com/Ab-Cloud-dev/CI-CD-Pipeline-with-Jenkins-Kubernetes-and-Ansible/blob/main/images/Recording%202025-09-18%20195708.gif?raw=true",
+                    github: "https://github.com/Ab-Cloud-dev/CI-CD-Pipeline-with-Jenkins-Kubernetes-and-Ansible",
+                    demo: ""
+                },
+                {
+                    title: "100-Days-Of-DevOps-KodeKloud-Solutions-Explanation",
+                    description: "A comprehensive personal and community challenge documenting 100 days of DevOps learning. Built around KodeKloud's DevOps track, featuring daily task completions, detailed explanations, and real-world application examples of DevOps tools, concepts, and best practices.",
+                    tech: ["Linux", "Docker", "Kubernetes", "Terraform", "AWS", "DevOps"],
+                    image: "https://raw.githubusercontent.com/Ab-Cloud-dev/100-Days-Of-DevOps-KodeKloud-Solutions-Explanation/refs/heads/main/Task-64-Fix%20Python%20App%20Deployed%20on%20Kubernetes%20Cluster/Scene-gif.gif",
+                    github: "https://github.com/Ab-Cloud-dev/100-Days-Of-DevOps-KodeKloud-Solutions-Explanation",
+                    demo: "https://ab-cloud-dev.github.io/100-Days-Of-DevOps-KodeKloud-Solutions-Explanation/"
+                },
+                {
+                    title: "AWS DevOps & Infrastructure Automation",
+                    description: "Comprehensive showcase featuring Kubernetes 2048 Game Deployment using EKS Fargate, Enterprise Application Migration to AWS, Automated EBS Backup using Lambda, and S3 event-driven File Transfer Automation.",
+                    tech: ["AWS", "EKS", "Lambda", "S3", "CloudWatch", "Fargate"],
+                    image: "https://raw.githubusercontent.com/Ab-Cloud-dev/Ab-Cloud-dev.github.io/refs/heads/main/Screenshot_2.png",
+                    github: "https://github.com/Ab-Cloud-dev/AWS-Projects",
+                    demo: ""
+                },
+                {
+                    title: "Cloud Infrastructure Templates",
+                    description: "Production-ready Terraform modules and templates for AWS and Azure deployments, featuring best practices for security, scalability, and maintainability in enterprise environments.",
+                    tech: ["Terraform", "AWS", "Azure", "Infrastructure as Code", "Security"],
+                    image: "https://github.com/Ab-Cloud-dev/TerraForm-Iac-/blob/main/02-3-tier-Architecture/Gif.gif?raw=true",
+                    github: "https://github.com/Ab-Cloud-dev/TerraForm-Iac-/tree/main",
+                    demo: ""
+                },
+                {
+                    title: "AWS S3 Lambda File Transfer Automation",
+                    description: "An event-driven file processing system that automatically transfers uploaded files from a public S3 bucket to a secured private bucket while maintaining complete audit logs in DynamoDB.",
+                    tech: ["AWS", "Lambda", "S3", "DynamoDB", "Event-driven", "Serverless"],
+                    image: "https://raw.githubusercontent.com/Ab-Cloud-dev/AWS-Projects/988f6355f0f5befb0af4b953661d9a3416b39ae9/4.%20Aws-S3-Lambda-Automation/Overview.gif",
+                    github: "https://github.com/Ab-Cloud-dev/AWS-Projects/tree/main/4.%20Aws-S3-Lambda-Automation",
+                    demo: ""
+                },
+                {
+                    title: "AWS Serverless 3-Tier Architecture (Student Management System)",
+                    description: "A fully serverless student management system built entirely on AWS managed services, demonstrating modern cloud-native application architecture. This project eliminates server management while providing automatic scaling, high availability, and pay-per-use pricing—showcasing the power of serverless computing for web applications.",
+                    tech: ["AWS", "Serverless", "Lambda", "API Gateway", "DynamoDB", "3-Tier Architecture"],
+                    image: "https://github.com/Ab-Cloud-dev/AWS-Projects/blob/main/5.%20AWS%20Serverless%203%20tier%20Architecture/Images/Overview.gif?raw=true",
+                    github: "https://github.com/Ab-Cloud-dev/AWS-Projects/tree/main/5.%20AWS%20Serverless%203%20tier%20Architecture",
+                    demo: ""
+                },
+                {
+                    title: "VProfile Application Migration: AWS Lift-and-Shift Strategy",
+                    description: "A comprehensive migration project that moves a traditional multi-tier web application from on-premises infrastructure to AWS cloud using the lift-and-shift (rehosting) strategy. This approach minimizes application changes while immediately gaining cloud benefits like scalability, high availability, and managed infrastructure.",
+                    tech: ["AWS", "EC2", "RDS", "CloudFormation", "Migration", "Lift-and-Shift"],
+                    image: "https://github.com/user-attachments/assets/3fdab865-71ca-4349-8522-6b45190b8461",
+                    github: "https://github.com/Ab-Cloud-dev/AWS-Projects/blob/67ce59b524c7ba55b8337b91c2298073032135c7/2.%20vprofile-project-awsliftandshift/image-1.png",
+                    demo: ""
+                },
+                {
+                    title: "EBS Snapshot Automation with AWS Lambda",
+                    description: "A serverless disaster recovery solution that automatically creates and manages EBS volume snapshots across multiple AWS regions. This project implements event-driven backup automation with intelligent filtering, comprehensive error handling, and detailed email reporting—all without managing any servers.",
+                    tech: ["AWS", "Lambda", "EBS", "SNS", "CloudWatch", "Disaster Recovery"],
+                    image: "https://github.com/Ab-Cloud-dev/AWS-Projects/blob/main/3.%20EBS%20Snapshot%20Automation%20Using%20Lambda/Images/architecture-diagram.png?raw=true",
+                    github: "https://github.com/Ab-Cloud-dev/AWS-Projects",
+                    demo: ""
+                },
+                {
+                    title: "Containerized Application Deployment with CI/CD on Amazon ECS",
+                    description: "A comprehensive containerized application deployment project demonstrating modern DevOps practices on AWS ECS. This project showcases automated CI/CD pipelines, container orchestration, and scalable microservices architecture using Amazon's managed container service.",
+                    tech: ["AWS", "ECS", "Docker", "CI/CD", "Microservices", "Container Orchestration"],
+                    image: "https://github.com/Ab-Cloud-dev/AWS-Projects/blob/main/6.%20Containerized%20App%20Deployment%20with%20CICD%20on%20ECS/Images/image-6.png?raw=true",
+                    github: "https://github.com/Ab-Cloud-dev/AWS-Projects/tree/main/6.%20Containerized%20App%20Deployment%20with%20CICD%20on%20ECS",
+                    demo: ""
+                },
+                {
+                    title: "Packer Golden Images",
+                    description: "Automated AMI creation pipeline for enterprise workloads with security hardening, automated patching, custom web app baking, and CI/CD pipeline integration using Packer and Ansible.",
+                    tech: ["Packer", "Ansible", "AWS", "AMI", "Security", "Automation"],
+                    image: "",
+                    github: "https://github.com/Ab-Cloud-dev/Custom-AMI-Packer",
+                    demo: ""
+                }
+            ],
+            certifications: [
+                {
+                    name: "HashiCorp Certified: Terraform Associate (003)",
+                    issuer: "HashiCorp",
+                    code: "003",
+                    icon: "certs-icons/Terraform Associate (003).png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "AWS Certified Solutions Architect – Associate",
+                    issuer: "Amazon Web Services",
+                    code: "SAA-C03",
+                    icon: "certs-icons/AWS Certified Solutions Architect – Associate.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Well-Architected Proficient",
+                    issuer: "Amazon Web Services",
+                    code: "",
+                    icon: "certs-icons/Well-Architected Proficient.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "AWS Educate Introduction to Generative AI - Training Badge",
+                    issuer: "Amazon Web Services",
+                    code: "",
+                    icon: "certs-icons/AWS Educate Introduction to Generative AI - Training Badge.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "PCEP™ – Certified Entry-Level Python Programmer",
+                    issuer: "Python Institute",
+                    code: "PCEP-30-02",
+                    icon: "certs-icons/PCEP™ – Certified Entry-Level Python Programmer.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Microsoft Certified: Azure Fundamentals",
+                    issuer: "Microsoft",
+                    code: "AZ-900",
+                    icon: "certs-icons/Microsoft Certified- Azure Fundamentals.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Verified International Academic Qualifications",
+                    issuer: "Microsoft",
+                    code: "",
+                    icon: "certs-icons/Verified International Academic Qualifications.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Server Virtualization with Windows Server Hyper-V and System Center",
+                    issuer: "Microsoft",
+                    code: "Exam 409",
+                    icon: "certs-icons/Exam-Server-Virtualization-with-Windows.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Configuring Advanced Windows Server 2012 Services",
+                    issuer: "Microsoft",
+                    code: "Exam 412",
+                    icon: "certs-icons/Configuring_Advanced_Windows_Server_2012_Services-01.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "MCSA: Windows Server 2012 - Certified 2016",
+                    issuer: "Microsoft",
+                    code: "",
+                    icon: "certs-icons/MCSA_Windows_Server_2012-01.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Administering Windows Server 2012",
+                    issuer: "Microsoft",
+                    code: "Exam 411",
+                    icon: "certs-icons/Administering_Windows_Server_2012-01.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Installing and Configuring Windows Server 2012",
+                    issuer: "Microsoft",
+                    code: "Exam 410",
+                    icon: "certs-icons/Installing_and_Configuring_Windows_Server_2012-01.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Microsoft Certified: Azure Administrator Associate",
+                    issuer: "Microsoft",
+                    code: "AZ-104",
+                    icon: "certs-icons/azure-administrator-associate.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "CCNA Routing and Switching",
+                    issuer: "Cisco",
+                    code: "",
+                    icon: "certs-icons/CCNA Routing and Switching.png",
+                    verifyUrl: "https://www.credly.com/users/abdullah-cert"
+                },
+                {
+                    name: "Cloud-AWS-Kodekloud-01",
+                    issuer: "Kodekloud",
+                    code: "Level-1",
+                    icon: "certs-icons/Cloud-AWS-Kodekloud-01.png",
+                    verifyUrl: "https://engineer.kodekloud.com/certificate-verification/2fcc5090-2282-4615-a0fd-69f34033089e",
+                    isKodekloud: true
+                },
+                {
+                    name: "Cloud-AWS-Kodekloud-02",
+                    issuer: "Kodekloud",
+                    code: "Level-2",
+                    icon: "certs-icons/Cloud-AWS-Kodekloud-02.png",
+                    verifyUrl: "https://engineer.kodekloud.com/certificate-verification/690bc171-33c3-4af8-905b-b18986d9c58b",
+                    isKodekloud: true
+                },
+                {
+                    name: "Cloud-AWS-Kodekloud-03",
+                    issuer: "Kodekloud",
+                    code: "Level-3",
+                    icon: "certs-icons/Cloud-AWS-Kodekloud-03.png",
+                    verifyUrl: "https://engineer.kodekloud.com/certificate-verification/5251bf2f-08be-493e-b622-4d97e51ad6d9",
+                    isKodekloud: true
+                },
+                {
+                    name: "100-Days-Of-DevOps-Challenge",
+                    issuer: "Kodekloud",
+                    code: "Completion",
+                    icon: "certs-icons/100-Days-Of-DevOps.png",
+                    verifyUrl: "https://engineer.kodekloud.com/certificate-verification/ef09ab3a-755c-4972-b073-e4c0a66511de",
+                    isKodekloud: true
+                }
+            ],
+            blog: [
+                {
+                    title: "100 Days of DevOps: My Learning Journey",
+                    date: "2025",
+                    excerpt: "Documentation of my comprehensive DevOps learning journey through practical, hands-on challenges and real-world scenarios.",
+                    url: "https://ab-cloud-dev.github.io/100-Days-Of-DevOps-KodeKloud-Solutions-Explanation/"
+                }
+            ],
+            contact: {
+                email: "mohammed.abdullah700@gmail.com",
+                location: "Hyderabad, India",
+                linkedin: "https://www.linkedin.com/in/ab-cloud-dev/",
+                github: "https://github.com/Ab-Cloud-dev",
+                website: "https://ab-cloud-dev.github.io"
+            },
+            social: [
+                { platform: "LinkedIn", icon: "fab fa-linkedin", url: "https://www.linkedin.com/in/ab-cloud-dev/" },
+                { platform: "GitHub", icon: "fab fa-github", url: "https://github.com/Ab-Cloud-dev" },
+                { platform: "Email", icon: "fas fa-envelope", url: "mailto:mohammed.abdullah700@gmail.com" },
+                { platform: "Credly", icon: "fas fa-certificate", url: "https://www.credly.com/users/abdullah-cert" }
+            ]
+        };
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function populateHero() {
+            document.getElementById('hero-name').textContent = PORTFOLIO_CONFIG.personal.name;
+            document.getElementById('hero-tagline').textContent = PORTFOLIO_CONFIG.personal.tagline;
+        }
+
+        function populateAbout() {
+            document.getElementById('about-text').textContent = PORTFOLIO_CONFIG.personal.about;
+        }
+
+        function populateSkills() {
+            const container = document.getElementById('skills-container');
+            container.innerHTML = '';
+            PORTFOLIO_CONFIG.skills.forEach((category, index) => {
+                const skillCard = document.createElement('div');
+                skillCard.className = 'skill-category animate-on-scroll fade-scale';
+                skillCard.style.transitionDelay = `${index * 50}ms`;
+                skillCard.innerHTML = `
+                    <h3><i class="fas ${category.icon}"></i>${category.category}</h3>
+                    <ul class="skill-list">
+                        ${category.skills.map(skill => `<li class="skill-tag">${escapeHtml(skill)}</li>`).join('')}
+                    </ul>
+                `;
+                container.appendChild(skillCard);
+            });
+        }
+
+        function populateExperience() {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = '';
+            PORTFOLIO_CONFIG.experience.forEach((job, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'timeline-item animate-on-scroll fade-left';
+                timelineItem.style.transitionDelay = `${index * 100}ms`;
+                timelineItem.innerHTML = `
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">${escapeHtml(job.date)}</div>
+                        <h3 class="timeline-title">${escapeHtml(job.title)}</h3>
+                        <div class="timeline-company">${escapeHtml(job.company)}${job.location ? ' | ' + escapeHtml(job.location) : ''}</div>
+                        <ul class="timeline-highlights">
+                            ${job.highlights.map(highlight => `<li>${escapeHtml(highlight)}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                container.appendChild(timelineItem);
+            });
+        }
+
+        function populateProjects() {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '';
+            PORTFOLIO_CONFIG.projects.forEach((project, index) => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card animate-on-scroll fade-scale';
+                projectCard.style.transitionDelay = `${index * 75}ms`;
+                const imageHtml = project.image
+                    ? `<img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)} diagram" loading="lazy" onerror="this.parentElement.innerHTML='<i class=\\'fas fa-diagram-project\\'></i>';">`
+                    : `<i class="fas fa-diagram-project"></i>`;
+                projectCard.innerHTML = `
+                    <div class="project-image">${imageHtml}</div>
+                    <div class="project-content">
+                        <h3 class="project-title">${escapeHtml(project.title)}</h3>
+                        <p class="project-description">${escapeHtml(project.description)}</p>
+                        <div class="project-tech">
+                            ${project.tech.map(tech => `<span class="tech-tag">${escapeHtml(tech)}</span>`).join('')}
+                        </div>
+                        <div class="project-links">
+                            ${project.github ? `<a href="${escapeHtml(project.github)}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Click to View Code</a>` : ''}
+                            ${project.demo ? `<a href="${escapeHtml(project.demo)}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Demo</a>` : ''}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(projectCard);
+            });
+        }
+
+        function populateCertifications() {
+            const container = document.getElementById('certifications-container');
+            container.innerHTML = '';
+            PORTFOLIO_CONFIG.certifications.forEach((cert, index) => {
+                const certCard = document.createElement('div');
+                certCard.className = cert.type === 'kodekloud' ? 'cert-card kodekloud-cert animate-on-scroll fade-scale' : 'cert-card animate-on-scroll fade-scale';
+                certCard.style.transitionDelay = `${index * 50}ms`;
+
+                const iconHtml = cert.icon
+                    ? `<img src="${escapeHtml(cert.icon)}" alt="${escapeHtml(cert.name)} certification" class="cert-icon-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">`
+                    : '';
+
+                certCard.innerHTML = `
+                    ${iconHtml}
+                    <div class="cert-icon" style="${cert.icon ? 'display: none;' : ''}"><i class="fas fa-certificate"></i></div>
+                    <div class="cert-name">${escapeHtml(cert.name)}</div>
+                    <div class="cert-issuer">${escapeHtml(cert.issuer)}${cert.code ? ' | ' + escapeHtml(cert.code) : ''}</div>
+                    <a href="${escapeHtml(cert.verifyUrl)}" class="cert-verify" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-check-circle"></i> Verify
+                    </a>
+                `;
+                container.appendChild(certCard);
+            });
+        }
+
+        function populateBlog() {
+            const container = document.getElementById('blog-container');
+            container.innerHTML = '';
+            if (PORTFOLIO_CONFIG.blog.length === 0) {
+                container.innerHTML = '<p class="text-center" style="color: var(--text-light);">Blog posts coming soon...</p>';
+                return;
+            }
+            PORTFOLIO_CONFIG.blog.forEach((post, index) => {
+                const blogItem = document.createElement('div');
+                blogItem.className = 'blog-item animate-on-scroll fade-up';
+                blogItem.style.transitionDelay = `${index * 100}ms`;
+                blogItem.innerHTML = `
+                    <h3 class="blog-title">
+                        <a href="${escapeHtml(post.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(post.title)}</a>
+                    </h3>
+                    <div class="blog-meta">${escapeHtml(post.date)}</div>
+                    <p class="blog-excerpt">${escapeHtml(post.excerpt)}</p>
+                `;
+                container.appendChild(blogItem);
+            });
+        }
+
+        function populateContact() {
+            const container = document.getElementById('contact-container');
+            container.innerHTML = '';
+            const contactItems = [
+                { icon: 'fas fa-envelope', value: PORTFOLIO_CONFIG.contact.email, link: `mailto:${PORTFOLIO_CONFIG.contact.email}` },
+                { icon: 'fas fa-map-marker-alt', value: PORTFOLIO_CONFIG.contact.location, link: '' },
+                { icon: 'fab fa-linkedin', value: 'LinkedIn', link: PORTFOLIO_CONFIG.contact.linkedin },
+                { icon: 'fab fa-github', value: 'GitHub', link: PORTFOLIO_CONFIG.contact.github }
+            ];
+            contactItems.forEach((item, index) => {
+                const contactDiv = document.createElement('div');
+                contactDiv.className = 'contact-item animate-on-scroll fade-up';
+                contactDiv.style.transitionDelay = `${index * 100}ms`;
+                const content = item.link
+                    ? `<a href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.value)}</a>`
+                    : escapeHtml(item.value);
+                contactDiv.innerHTML = `<i class="${item.icon}"></i><span>${content}</span>`;
+                container.appendChild(contactDiv);
+            });
+        }
+
+        function populateSocialLinks() {
+            const container = document.getElementById('social-links-container');
+            container.innerHTML = '';
+            PORTFOLIO_CONFIG.social.forEach(social => {
+                const link = document.createElement('a');
+                link.href = social.url;
+                link.className = 'social-link';
+                link.setAttribute('aria-label', social.platform);
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+                link.innerHTML = `<i class="${social.icon}"></i>`;
+                container.appendChild(link);
+            });
+        }
+
+        function updateFooter() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            document.getElementById('footer-name').textContent = PORTFOLIO_CONFIG.personal.name;
+        }
+
+        function initMobileMenu() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+            });
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        function initNavbarScroll() {
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
+        }
+
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const navHeight = document.querySelector('.navbar').offsetHeight;
+                        window.scrollTo({
+                            top: target.offsetTop - navHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        function initDarkMode() {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const themeIcon = themeToggle.querySelector('i');
+
+            // Check for saved theme preference or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+
+                // Update icon
+                if (document.body.classList.contains('dark-mode')) {
+                    themeIcon.classList.replace('fa-moon', 'fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    themeIcon.classList.replace('fa-sun', 'fa-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            populateHero();
+            populateAbout();
+            populateSkills();
+            populateExperience();
+            populateProjects();
+            populateCertifications();
+            populateBlog();
+            populateContact();
+            populateSocialLinks();
+            updateFooter();
+            initMobileMenu();
+            initNavbarScroll();
+            initSmoothScroll();
+            initScrollAnimations();
+            initDarkMode();
+        });
+    </script>
+</body>
+</html>
